@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="41px" viewBox="0 0 25 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>slider_arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main" transform="translate(-1311.000000, -399.000000)" fill="#D70F37" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(30.000000, 200.000000)">
+                <polygon id="slider_arrow" points="1281 235.769553 1285.24264 240.012193 1305.74874 219.506097 1285.24264 199 1281 203.242641 1297.26346 219.506097"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

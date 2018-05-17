@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>callback</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main" transform="translate(0.000000, -1272.000000)">
+            <g id="callback" transform="translate(0.000000, 1272.000000)">
+                <rect id="Rectangle-6" fill="#B00015" x="0" y="0" width="60" height="60"></rect>
+                <g id="ic_local_phone_24px" transform="translate(10.000000, 10.000000)">
+                    <g id="Group">
+                        <polygon id="Shape" points="0 0 40 0 40 40 0 40"></polygon>
+                        <path d="M11.0333333,17.9833333 C13.4333333,22.7 17.3,26.55 22.0166667,28.9666667 L25.6833333,25.3 C26.1333333,24.85 26.8,24.7 27.3833333,24.9 C29.25,25.5166667 31.2666667,25.85 33.3333333,25.85 C34.25,25.85 35,26.6 35,27.5166667 L35,33.3333333 C35,34.25 34.25,35 33.3333333,35 C17.6833333,35 5,22.3166667 5,6.66666667 C5,5.75 5.75,5 6.66666667,5 L12.5,5 C13.4166667,5 14.1666667,5.75 14.1666667,6.66666667 C14.1666667,8.75 14.5,10.75 15.1166667,12.6166667 C15.3,13.2 15.1666667,13.85 14.7,14.3166667 L11.0333333,17.9833333 L11.0333333,17.9833333 Z" id="Shape" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

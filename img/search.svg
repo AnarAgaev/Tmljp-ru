@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-975.000000, -119.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Header-Copy-9">
+                <g id="Group-12-Copy" transform="translate(975.000000, 116.000000)">
+                    <g id="Group-22" transform="translate(0.000000, 3.000000)">
+                        <path d="M14.3790667,13.4446331 L18.9103235,17.9758898 L17.1425565,19.7436568 L12.4783494,15.0794497 C11.2727401,15.8217919 9.85304341,16.25 8.33333333,16.25 C3.96107906,16.25 0.416666667,12.7055876 0.416666667,8.33333333 C0.416666667,3.96107906 3.96107906,0.416666667 8.33333333,0.416666667 C12.7055876,0.416666667 16.25,3.96107906 16.25,8.33333333 C16.25,10.2815883 15.5462393,12.0654712 14.3790667,13.4446331 Z M8.33333333,13.75 C11.3248757,13.75 13.75,11.3248757 13.75,8.33333333 C13.75,5.34179094 11.3248757,2.91666667 8.33333333,2.91666667 C5.34179094,2.91666667 2.91666667,5.34179094 2.91666667,8.33333333 C2.91666667,11.3248757 5.34179094,13.75 8.33333333,13.75 Z" id="search"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
