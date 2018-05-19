@@ -543,6 +543,33 @@ aside {
 			overflow: hidden;
 		}
 		.active_ul{display: block;}
+
+
+		/* Расоходящийся круг по клику на пункте меню */
+		.ripple {
+			display: block; 
+			user-select: none;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.ink {
+			display: block; 
+			position: absolute;
+			background: rgb(255, 255, 255);
+			border-radius: 100%;
+			transform: scale(0);
+		}
+		/* Анимация увеличит .ink в 2 раза, попутно меняя его прозрачность. */
+		.ink.animate {
+			animation: ripple 0.4s linear;
+		}
+		@keyframes ripple {
+			100% {opacity: 0; transform: scale(2);} /* масштабируем в 2 раза */
+		}
+
+
+
 	}
 	& > div{
 		width: 280px;

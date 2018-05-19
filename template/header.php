@@ -74,69 +74,69 @@
 			<aside>
 				<ul id="nav_list">
 					<li>
-						<a href="">продукция</a>
+						<a class="ripple" href="">продукция</a>
 						<ul class="submenu active_ul">  <!-- для раскрытого по умолчанию меню - добавить класс active_ul -->
 							<li>
-								<a href="">Испытательные стенды<img src="/img/cross-sidebar.svg" class="cross-sidebar active_cross-sidebar"></a> <!-- для раскрытого по умолчанию меню - добавить к картинке класс active_cross-sidebar -->
+								<a class="ripple" href="">Испытательные стенды<img src="/img/cross-sidebar.svg" class="cross-sidebar active_cross-sidebar"></a> <!-- для раскрытого по умолчанию меню - добавить к картинке класс active_cross-sidebar -->
 								<ul class="submenu active_ul"> <!-- для раскрытого по умолчанию меню - добавить класс active_ul -->
-									<li><a href="">Трансмиссии и гидравлика</a></li>
-									<li><a href="">Гистерезисные тормоза</a></li>
-									<li><a href="">Моторы и двигатели</a></li>
+									<li><a class="ripple" href="">Трансмиссии и гидравлика</a></li>
+									<li><a class="ripple" href="">Гистерезисные тормоза</a></li>
+									<li><a class="ripple" href="">Моторы и двигатели</a></li>
 								</ul>
 							</li>        
 							<li>
-								<a href="">Телеметрия<img src="/img/cross-sidebar.svg" class="cross-sidebar"></a>
+								<a class="ripple" href="">Телеметрия<img src="/img/cross-sidebar.svg" class="cross-sidebar"></a>
 								<ul class="submenu">
-									<li><a href="">Cтационарная</a></li>
-									<li><a href="">Для валов</a></li>
-									<li><a href="">Для колес и роторов</a></li>
-									<li><a href="">Для термопар</a></li>
-									<li><a href="">Одноканальная</a></li>
+									<li><a class="ripple" href="">Cтационарная</a></li>
+									<li><a class="ripple" href="">Для валов</a></li>
+									<li><a class="ripple" href="">Для колес и роторов</a></li>
+									<li><a class="ripple" href="">Для термопар</a></li>
+									<li><a class="ripple" href="">Одноканальная</a></li>
 								</ul>
 							</li>        
 							<li>
-								<a href="">Датчики<img src="/img/cross-sidebar.svg" class="cross-sidebar"></a>
+								<a class="ripple" href="">Датчики<img src="/img/cross-sidebar.svg" class="cross-sidebar"></a>
 								<ul class="submenu">
-									<li><a href="">Крутящий момент</a></li>
-									<li><a href="">Перемещение</a></li>
-									<li class="active"><a href="">Усилие и вес</a></li>
+									<li><a class="ripple" href="">Крутящий момент</a></li>
+									<li><a class="ripple" href="">Перемещение</a></li>
+									<li class="active"><a class="ripple" href="">Усилие и вес</a></li>
 								</ul>
 							</li>        
 							<li>
-								<a href="">Электроника и ПО<img src="/img/cross-sidebar.svg" class="cross-sidebar"></a>
+								<a class="ripple" href="">Электроника и ПО<img src="/img/cross-sidebar.svg" class="cross-sidebar"></a>
 								<ul class="submenu">
-									<li><a href="">Вспомогательная электроника</a></li>
-									<li><a href="">Контроллеры</a></li>
-									<li><a href="">Программное обеспечение</a></li>
+									<li><a class="ripple" href="">Вспомогательная электроника</a></li>
+									<li><a class="ripple" href="">Контроллеры</a></li>
+									<li><a class="ripple" href="">Программное обеспечение</a></li>
 								</ul>
 							</li>
 						</ul>
 					</li>        
 					<li>
-						<a href="">отрасли</a>
+						<a class="ripple" href="">отрасли</a>
 						<ul class="submenu">
-							<li><a href="">Авиация</a></li>
-							<li><a href="">Автомобилестроение</a></li>
-							<li><a href="">Добывающая промышленность</a></li>
-							<li><a href="">Железнодорожная область</a></li>
+							<li><a class="ripple" href="">Авиация</a></li>
+							<li><a class="ripple" href="">Автомобилестроение</a></li>
+							<li><a class="ripple" href="">Добывающая промышленность</a></li>
+							<li><a class="ripple" href="">Железнодорожная область</a></li>
 						</ul>
 					</li>        
 					<li>
-						<a href="">решения</a>
+						<a class="ripple" href="">решения</a>
 						<ul class="submenu">
-							<li><a href="">Измерение крутящего момента</a></li>
-							<li><a href="">Многоканальный сбор данных</a></li>
-							<li><a href="">Нагружающие устройства</a></li>
-							<li><a href="">Проектирование стендов под ключ</a></li>
+							<li><a class="ripple" href="">Измерение крутящего момента</a></li>
+							<li><a class="ripple" href="">Многоканальный сбор данных</a></li>
+							<li><a class="ripple" href="">Нагружающие устройства</a></li>
+							<li><a class="ripple" href="">Проектирование стендов под ключ</a></li>
 						</ul>
 					</li>        
 					<li>
-						<a href="">услуги</a>
+						<a class="ripple" href="">услуги</a>
 						<ul class="submenu">
-							<li><a href="">Пусконаладка и монтаж</a></li>
-							<li><a href="">Метрология</a></li>
-							<li><a href="">Обучение работе на оборудовании</a></li>
-							<li><a href="">Разработка индивидуальных решений</a></li>
+							<li><a class="ripple" href="">Пусконаладка и монтаж</a></li>
+							<li><a class="ripple" href="">Метрология</a></li>
+							<li><a class="ripple" href="">Обучение работе на оборудовании</a></li>
+							<li><a class="ripple" href="">Разработка индивидуальных решений</a></li>
 						</ul>
 					</li>        
 				</ul>

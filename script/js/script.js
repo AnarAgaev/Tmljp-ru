@@ -16,22 +16,46 @@ $(document).ready(function(){
 	});
 
 	$('.cross-sidebar').on('click',function(e){
-		e.stopPropagation();
-		e.preventDefault();
-		
-		if($(this).parent('a').next('.submenu').css('display') == 'none'){
-			$(this).css({transform:'rotate(0deg)'});
-			$('.submenu').not($(this).parent('a').next('.submenu')).not($(this).parent('a').parent('li').parent('.submenu')).slideUp(300);
-			$(this).parent('a').next('.submenu').slideDown(300);
-			$('.cross-sidebar').not($(this)).css({transform:'rotate(-315deg)'});
-		}
-		else{
+		if($(this).parent('a').next('.submenu').css('display') == 'block'){
+			e.stopPropagation();
+			e.preventDefault();
+
 			$(this).parent('a').next('.submenu').slideUp(300);
 			$(this).css({transform:'rotate(-315deg)'});
 		}
 	});
 	
 	
+
+
+	//Эффект расохдящегося круга
+	$('.ripple').click(function(e){
+		var ink, d, x, y;
+
+		//создаём .ink элемент, если еще не создан
+		if ($(this).children('.ink').length == 0){
+			$(this).prepend("<span class='ink'></span>");
+		}
+
+		//сбрасываем класс отвечаюищй за анимацию
+		ink = $(this).children('.ink');
+		ink.removeClass('animate'); 
+		
+		//рассчитываем размеры .ink элемента
+		if(!ink.height() && !ink.width()) {
+			d = Math.max($(this).outerWidth(), $(this).outerHeight());
+			ink.css({height: d, width: d});
+		}
+
+		//получим начальные координаты, т.к. центр .ink нужно поместить в точку клика
+		x = e.pageX - $(this).offset().left - ink.width()/2;
+		y = e.pageY - $(this).offset().top - ink.height()/2;
+		//установим координаты и запустим анимацию
+		ink.css({top: y+'px', left: x+'px'}).addClass('animate');
+	});
+
+
+
 	
 	/* Слайдер */
 	$(function () {
