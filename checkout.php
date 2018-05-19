@@ -42,32 +42,32 @@
 	<li>
 		<div><img src="/img/checkout_temp_img/1.jpg"></div>
 		<div><span>Тензодатчики сжатия CLJ-NA</span><font>Телеметрические системы</font></div>
-		<div><span id="check_minus"></span><div id="check_nums">1 шт</div><span id="check_plus"></span></div>
-		<div><span id="check_delite"></span></div>
+		<div><span class=""></span><div class="">1 шт</div><span class=""></span></div>
+		<div><span class=""></span></div>
 	</li>
 	<li>
 		<div><img src="/img/checkout_temp_img/2.jpg"></div>
 		<div><span>Индуктивный динамометр EC250</span><font>Телеметрические системы</font></div>
-		<div><span id="check_minus"></span><div id="check_nums">2 шт</div><span id="check_plus"></span></div>
-		<div><span id="check_delite"></span></div>
+		<div><span class=""></span><div class="">2 шт</div><span class=""></span></div>
+		<div><span class=""></span></div>
 	</li>
 	<li>
 		<div><img src="/img/checkout_temp_img/3.jpg"></div>
 		<div><span>Тензодатчики сжатия CLJ-NB</span><font>Телеметрические системы</font></div>
-		<div><span id="check_minus"></span><div id="check_nums">1 шт</div><span id="check_plus"></span></div>
-		<div><span id="check_delite"></span></div>
+		<div><span class=""></span><div class="">1 шт</div><span class=""></span></div>
+		<div><span class=""></span></div>
 	</li>
 	<li>
 		<div></div>
 		<div><span>Тензодатчики сжатия CLU-NA/CLU-NA-D</span><font>Телеметрические системы</font></div>
-		<div><span id="check_minus"></span><div id="check_nums">1 шт</div><span id="check_plus"></span></div>
-		<div><span id="check_delite"></span></div>
+		<div><span class=""></span><div class="">1 шт</div><span class=""></span></div>
+		<div><span class=""></span></div>
 	</li>
 	<li>
 		<div><img src="/img/checkout_temp_img/5.jpg"></div>
 		<div><span>Индуктивный динамометр EC250</span><font>Телеметрические системы</font></div>
-		<div><span id="check_minus"></span><div id="check_nums">2 шт</div><span id="check_plus"></span></div>
-		<div><span id="check_delite"></span></div>
+		<div><span class=""></span><div class="">2 шт</div><span class=""></span></div>
+		<div><span class=""></span></div>
 	</li>
 </ul>
 	

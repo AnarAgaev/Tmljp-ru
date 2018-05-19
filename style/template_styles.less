@@ -1214,7 +1214,19 @@ aside {
 		div:nth-child(3){
 			margin-right: 84px;
 			span, div{height: 36px; }
-			span{background-color: #dee1e3; width: 36px;cursor: pointer;position: relative;}
+			span {
+				background-color: #dee1e3; 
+				width: 36px;
+				cursor: pointer;
+				position: relative;
+				.base__transition(.1s);
+				&:hover { 
+					background-color: #556578;
+					&:first-child:before, &:last-child:before, &:last-child:after {
+						background-color: #dee1e3;
+					}
+				}
+			}
 			div{
 				width: 63px;
 				text-align: center;
