@@ -81,7 +81,10 @@
 			<a href="mailto:info@tmljp.ru" class="mailto">info@tmljp.ru</a>
 		</div>
 		<a href="https://redstar.agency/" target="_blank">
-			Создание сайта<br>Redstar Digital Agency<img src="/img/combined-shape.svg">
+			Создание сайта<br>Redstar Digital Agency
+			<svg width="35" height="33" xmlns="http://www.w3.org/2000/svg">
+				<path id="footer_logo" d="M17.267.18L20.3 9.597H14.23L17.267.18zM27.866 32.8l-7.985-5.828 4.911-3.558 3.074 9.385zm-4.77-20.135l11.321-.026-10.631 7.705-6.52 4.72-10.598 7.735 4.083-12.47-10.635-7.69 12.227.035 10.754-.01zm-1.4 4.78l1.679-1.213-.278.001H11.159l1.675 1.212 2.107 1.522-1.46 4.452 3.75-2.72 2.362-1.733 2.103-1.521z" fill="#8B949D" fill-rule="evenodd"/>
+			</svg>
 		</a>
 	</div>
 </footer>
