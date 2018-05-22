@@ -15,10 +15,59 @@
 </div>
 
 
+
+<!-- полупрозрачная подложка под модальные окна -->
+<div class="modal_background"></div>
+
+<!-- модальное окно colback -->
+<form action="" class="feedback colback_modal hide" method="post" enctype="multipart/form-data">
+	<div class="modal_close"></div>
+	<h2>Обратная связь</h2>
+	<p>Какая-то возможная текстовка на пару строк, доносящая опеределённую мысль о чём-то</p>
+	<input type="text" name="name_colback" placeholder="Имя">
+	<input type="text" name="phone_colback" placeholder="Телефон" class="active"> <!-- активному или с ошибкой добавляем класс active -->
+	<input type="text" name="mail_colback" placeholder="Электронная почта">
+	<input type="text" name="company_colback" placeholder="Компания">
+	<textarea name="comment_colback" placeholder="Комментарий"></textarea><!-- активному или с ошибкой добавляем класс active -->
+	<div class="check">
+		<input id="check_colback" name="check_colback" type="checkbox" value="check">
+		<label for="check_colback" class="mark_for_check"></label>
+		<label for="check_colback" class="test_for_check">Отправляя заявку, вы соглашаетесь на обработку персональных данных</label>
+	</div>
+	<button>отправить заявку</button>
+</form>
+
+
+<!-- модальное окно feedback -->
+<form action="" class="feedback feedback_modal hide" method="post" enctype="multipart/form-data">
+	<div class="modal_close"></div>
+	<h2>Обратная связь</h2>
+	<p>Какая-то возможная текстовка на пару строк, доносящая опеределённую мысль о чём-то</p>
+	<input type="text" name="name_feedback" placeholder="Имя">
+	<input type="text" name="phone_feedback" placeholder="Телефон" class="active"> <!-- активному или с ошибкой добавляем класс active -->
+	<input type="text" name="mail_feedback" placeholder="Электронная почта">
+	<input type="text" name="company_feedback" placeholder="Компания">
+	<textarea name="comment_feedback" placeholder="Комментарий"></textarea><!-- активному или с ошибкой добавляем класс active -->
+	<label class="file_upload">
+		<img src="/img/cross_add_file.png">
+		<span class="file_name">Прикрепить файл</span>
+		<p>Вы можете прикрепить к заявке документацию, чтобы наше общение было конкретным и быстрым</p>
+		<input type="file" name="file_feedback">
+	</label>
+	<div class="check">
+		<input id="check_feedback" name="check_feedback" type="checkbox" value="check">
+		<label for="check_feedback" class="mark_for_check"></label>
+		<label for="check_feedback" class="test_for_check">Отправляя заявку, вы соглашаетесь на обработку персональных данных</label>
+	</div>
+	<button>отправить заявку</button>
+</form>
+
+
+
 <div class="fix__buttons">
 	<a href="javascript:void(0)" id="go_to_top"><img src="/img/to-top.svg"></a>
-	<a href="javascript:void(0)"><img src="/img/callback_btn.svg"></a>
-	<a href="javascript:void(0)"><img src="/img/mail-float.svg"></a>
+	<a href="javascript:void(0)" id="colback_modal_btn"><img src="/img/callback_btn.svg"></a>
+	<a href="javascript:void(0)" id="feedback_modal_btn"><img src="/img/mail-float.svg"></a>
 </div>
 
 
@@ -31,7 +80,7 @@
 		</a>
 		<div>
 			<a href="/checkout.php"><span><img src="/img/order.svg"></span>Мой заказ – 7</a>
-			<a href="javascript::void(0)"><span><img src="/img/callback.svg"></span>Обратный звонок</a>
+			<a href="javascript::void(0)" id="colback_modal_btn_head"><span><img src="/img/callback.svg"></span>Обратный звонок</a>
 		</div>
 		<div>
 			<a class="In-English" href="javascript::void(0)">In English</a>

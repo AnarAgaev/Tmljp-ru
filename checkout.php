@@ -18,20 +18,20 @@
 
 <form action="" class="feedback checkout_page" method="post" enctype="multipart/form-data">
 	<h2>Оформление</h2>
-	<input type="text" id="name" name="name" placeholder="Имя" value="Константинопольский Константин">
-	<input type="text" id="phone" name="phone" placeholder="Телефон" class="active"> <!-- активному или с ошибкой добавляем класс active -->
-	<input type="text" id="mail" name="mail" placeholder="Электронная почта">
-	<input type="text" id="company" name="company" placeholder="Компания">
-	<textarea id="comment" name="comment" placeholder="Комментарий"></textarea><!-- активному или с ошибкой добавляем класс active -->
+	<input type="text" name="name_checkout" placeholder="Имя" value="Константинопольский Константин">
+	<input type="text" name="phone_checkout" placeholder="Телефон" class="active"> <!-- активному или с ошибкой добавляем класс active -->
+	<input type="text" name="mail_checkout" placeholder="Электронная почта">
+	<input type="text" name="company_checkout" placeholder="Компания">
+	<textarea name="comment_checkout" placeholder="Комментарий"></textarea><!-- активному или с ошибкой добавляем класс active -->
 	<label class="file_upload">
 		<img src="/img/cross_add_file.png">
-		<span id="file_name">Прикрепить файл</span>
+		<span class="file_name">Прикрепить файл</span>
 		<p>Вы можете прикрепить к заявке документацию, чтобы наше общение было конкретным и быстрым</p>
-		<input type="file" name="file">
+		<input type="file" name="file_checkout">
 	</label>
 	<div class="check">
 		<input id="check" name="check" type="checkbox" value="check">
-		<label for="check" id="mark_for_check"></label>
+		<label for="check" class="mark_for_check"></label>
 		<label for="check" class="test_for_check">Отправляя заявку, вы соглашаетесь на обработку персональных данных</label>
 	</div>
 	<button>отправить заявку</button>

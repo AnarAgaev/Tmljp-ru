@@ -135,6 +135,102 @@ p{
 }
 
 
+/* полупрозрачный фон под всплывающие окна */
+.modal_background {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+	z-index: 9999;
+	display: none;
+	opacity: 0;
+	.base__transition(1s);
+}
+.modal_background.show {
+	display: block;
+	opacity: 1;
+}
+
+
+/* модальное окно feedback */
+.colback_modal,
+.feedback_modal {
+	position: fixed;
+    top: 30px;
+    left: 50%;
+    z-index: 99999;
+	margin-left: -195px;
+	padding-top: 20px !important;
+}
+.colback_modal h2, .feedback_modal h2 { text-transform: uppercase; }
+.colback_modal .check { margin-top: 0 !important; }
+.colback_modal.hide, .feedback_modal.hide { margin-top: -200%; .base__transition(1s); }
+.colback_modal.show, .feedback_modal.show { margin-top: 0; .base__transition(.2s); }
+
+@media (max-height: 690px) {
+	.colback_modal {
+		position: absolute;
+		top: 0px;
+	}
+}
+@media (max-height: 825px) {
+	.feedback_modal {
+		position: absolute;
+		top: 0px;
+	}
+}
+
+
+
+/* кнопка закрыть модальное окно */
+.modal_close {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 18px;
+	right: 18px;
+	cursor: pointer;
+
+}
+.modal_close:before,
+.modal_close:after {
+	content: '';
+	display: block;
+	width: 3px;
+	height: 30px;
+	background-color: #06203d;
+	position: absolute;
+	left: 49%;
+	top: -3px;
+	.base__transition(.2s)
+}
+
+.modal_close:hover:before,
+.modal_close:hover:after {
+	background-color: #cc0033;
+}
+
+
+.modal_close:before {
+	transform: rotate(45deg) ;
+	-webkit-transform: rotate(45deg) ;
+	-moz-transform: rotate(45deg) ;
+	-o-transform: rotate(45deg) ;
+	-ms-transform: rotate(45deg) ;	
+}
+.modal_close:after {
+	transform: rotate(-45deg) ;
+	-webkit-transform: rotate(-45deg) ;
+	-moz-transform: rotate(-45deg) ;
+	-o-transform: rotate(-45deg) ;
+	-ms-transform: rotate(-45deg) ;	
+}
+
+
+
+
 /* Кнопки слева на каждой странице */
 .fix__buttons{
 	position: fixed;
@@ -637,10 +733,13 @@ aside {
 	}
 }
 
+
+
+
+
 /* Форма фидбэк */
 .feedback{
 	width: 390px;
-	/*height: 836px;   1!! убрать высоту после вёрстки */
 	background-color: #eff0f1;
 	padding: 30px;
 	margin-bottom: 40px;
@@ -737,7 +836,7 @@ aside {
 		cursor: pointer;
 		text-align: center;
 		img{display: block;margin: 0 auto 6px;}
-		#file_name{
+		.file_name{
 			display: block;
 			font-family: Arial;
 			font-size: 1em;
@@ -772,7 +871,7 @@ aside {
 		text-align: left;
 		margin-top: 20px;
 		margin-bottom: 30px;
-		#mark_for_check {
+		.mark_for_check {
 			float: left;
 			width:18px;
 			height:18px;
@@ -810,13 +909,13 @@ aside {
 	}
 	
 
-	input[type="checkbox"]:checked + #mark_for_check {
+	input[type="checkbox"]:checked + .mark_for_check {
 		background-color: #cf0011;
 		-webkit-box-shadow: 0px 0px 0px 3px #cf0011;
 		-moz-box-shadow: 0px 0px 0px 3px #cf0011;
 		box-shadow: 0px 0px 0px 3px #cf0011;		
 	}
-	input[type="checkbox"]:checked + #mark_for_check:before {
+	input[type="checkbox"]:checked + .mark_for_check:before {
 		border-left-color: #fff;
 		border-bottom-color: #fff;
 		opacity: 1;
@@ -837,13 +936,17 @@ aside {
 		color: #10141a;
 		margin-bottom: 30px;
 	}
-	input, textarea, #mark_for_check{
+	input, textarea, .mark_for_check{
 		-webkit-box-shadow: 0px 0px 0px 3px #eff0f1;
 		-moz-box-shadow: 0px 0px 0px 3px #eff0f1;
 		box-shadow: 0px 0px 0px 3px #eff0f1;
 	}
 	.file_upload{border: 3px dashed #eff0f1; width: 327px;}
 }
+
+
+
+
 
 
 

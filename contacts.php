@@ -20,21 +20,21 @@
 <form action="" class="feedback fb_at_content" method="post" enctype="multipart/form-data">
 	<h2>Обратная связь</h2>
 	<p>Какая-то возможная текстовка на пару строк, доносящая опеределённую мысль о чём-то</p>
-	<input type="text" id="name" name="name" placeholder="Имя" value="Константинопольский Константин">
-	<input type="text" id="phone" name="phone" placeholder="Телефон" class="active"> <!-- активному или с ошибкой добавляем класс active -->
-	<input type="text" id="mail" name="mail" placeholder="Электронная почта">
-	<input type="text" id="company" name="company" placeholder="Компания">
-	<textarea id="comment" name="comment" placeholder="Комментарий"></textarea><!-- активному или с ошибкой добавляем класс active -->
+	<input type="text" name="name_contact" placeholder="Имя" value="Константинопольский Константин">
+	<input type="text" name="phone_contact" placeholder="Телефон" class="active"> <!-- активному или с ошибкой добавляем класс active -->
+	<input type="text" name="mail_contact" placeholder="Электронная почта">
+	<input type="text" name="company_contact" placeholder="Компания">
+	<textarea name="comment_contact" placeholder="Комментарий"></textarea><!-- активному или с ошибкой добавляем класс active -->
 	<label class="file_upload">
 		<img src="/img/cross_add_file.png">
-		<span id="file_name">Прикрепить файл</span>
+		<span class="file_name">Прикрепить файл</span>
 		<p>Вы можете прикрепить к заявке документацию, чтобы наше общение было конкретным и быстрым</p>
-		<input type="file" name="file">
+		<input type="file" name="file_contact">
 	</label>
 	<div class="check">
-		<input id="check" name="check" type="checkbox" value="check">
-		<label for="check" id="mark_for_check"></label>
-		<label for="check" class="test_for_check">Отправляя заявку, вы соглашаетесь на обработку персональных данных</label>
+		<input id="check_contact" name="check_contact" type="checkbox" value="check">
+		<label for="check_contact" class="mark_for_check"></label>
+		<label for="check_contact" class="test_for_check">Отправляя заявку, вы соглашаетесь на обработку персональных данных</label>
 	</div>
 	<button>отправить заявку</button>
 </form>
