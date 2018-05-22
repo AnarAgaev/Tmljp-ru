@@ -77,7 +77,7 @@
 	</tr>
 </table>
 
-<h1>Новости</h1>
+<div class="h1">Новости</div>
 <div class="index_news">
 	<a href="javascript::void(0)">
 		<span>21 апреля 2017</span>
