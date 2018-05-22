@@ -54,102 +54,8 @@ $(document).ready(function(){
 		ink.css({top: y+'px', left: x+'px'}).addClass('animate');
 	});
 
-
-
 	
-	/* Слайдер */
-	$(function () {
-		const speed = 500;
-
-		var pictW,imgW,n,pict,img,currentM,end=true,btns,btnActive=0;
-		pict = $('#slider .pict'); // колекция блоков с картинками
-		img = $('#slider .images'); // коллекция картинок
-		pictW = 1200; // ширина блока с картинкой parseInt(pict.width())
-		n = pict.length; // колличество блоков с картинками
-		imgW=(n+1)*pictW; // ширина обёртки блоков с картинками (ширина двигаемого блока/тела с картинками)
-		img.width(imgW); // стрвим ширину блока обёртки  ширину картинки умноженную на кол-со картинок +1
-		$('#slider .pict:last').prependTo('.images'); // после инициализации сразу ставим последню картинку в начало
-		currentM = -pictW; // текущее положение (marginLeft) минус ширина одной картинки
-		btns = $('#slider ul li'); // коллекция кнопок - li элементов 
-		btns.eq( btnActive ).attr('class','active');
-		img.css('marginLeft',currentM); // ставим текущее положение блока обёртки в минус ширина одной картинки
-
-		function left_btn_click(){
-			if(end) {
-				end=false;
-				currentM = currentM + pictW;
-				img.animate({
-					marginLeft: currentM
-				}, speed,  function () {
-					end = true;
-					$('.pict:last').prependTo('.images');
-					currentM = currentM - pictW;
-					img.css('marginLeft',currentM);
-				});
-				// переключаем цвет кнопок
-				if(btnActive > 0)--btnActive;
-				else btnActive = 4;
-				//btns.eq( btnActive ).attr('class','active');
-				$('#slider ul li').not(btns.eq( btnActive ).attr('class','active')).removeClass();
-			}
-		}
-		
-		function right_btn_click(){
-			if(end) {
-				end=false;
-				currentM = currentM - pictW;
-				img.animate({
-					marginLeft: currentM
-				}, speed,  function () {
-					end = true;
-					$('#slider .pict:first').appendTo('.images');
-					currentM = currentM + pictW;
-					img.css('marginLeft',currentM);
-				});
-				// переключаем цвет кнопок
-				if(btnActive < 4)++btnActive;
-				else btnActive = 0;
-				//btns.eq( btnActive ).attr('class','active');
-				$('#slider ul li').not(btns.eq( btnActive ).attr('class','active')).removeClass();
-			}
-		}
-
-		$('#slider .left').click(function(e){left_btn_click();});
-		$('#slider .right').click(function(e){right_btn_click();});
-		
-		// обрабатываем клики по кнопкам
-		$('#slider ul li').click(function(e){
-			var length,steps;
-			steps = btnActive - $(this).index();
-			
-			if(steps == -1 || steps == 4) right_btn_click();
-			else if(steps == 1 || steps == -4) left_btn_click();
-			else{
-				if(steps == -2) length = -3600;
-				else if(steps == -3) length = -4800;
-				else if(steps == 2) {length = -4800; steps=3;}
-				else if(steps == 3) {length = -3600; steps=2;}
-				
-				if(end){
-					end=false;
-					img.animate({
-						marginLeft: length
-					}, speed,  function () {
-						end = true;
-						for(var i = 0; i < Math.abs(steps); i++){ // перестановки картинок
-							length = length + pictW;
-							$('#slider .pict:first').appendTo('.images');
-							img.css('marginLeft', length);
-						}
-					});
-					btnActive = $(this).index(); // красим кликнутую кнопку
-					$('#slider ul li').not(btns.eq( btnActive ).attr('class','active')).removeClass();
-				}
-			}
-		});
-	});
-
-
+	
 	/* Переключение между описанием и документацией на странице продукта */
 	$('.toggle').on('click', 'a', function(e){
 		e.stopPropagation();
@@ -198,13 +104,11 @@ $(document).ready(function(){
 		img = $('.body_galary .images a img'); // коллекция картинок
 		images_box = $('.body_galary .images'); // блок с картинками
 		
-		
 		$('.image_galary').append('<div class="body_prewie"></div>'); // добавим контейнер для превью картинок
 		for(var i=0; i < img.length; i++){ // добавим картинки в контейнер для превьюшек
 			$('.body_prewie').append('<div class="prew"><img src="'+img.eq(i).attr('src')+'"></div>');
 		}
 		$('.body_prewie .prew').eq(0).attr('class','prew active'); // делаем первое превью активным
-		
 
 		// клик по кнопке вправо
 		$( '.right' ).on( 'click', function(e) {
@@ -336,6 +240,153 @@ $(document).ready(function(){
 	});
 	
 	
+	
+	/* Новый слайдер на глваной */
+	$(function() {
+		const speed = 500;
+		var img,
+			images_box,
+			pictW,
+			end=true,
+			currentM,
+			btnActive = 1,
+			imgActive = 1,
+			clickPosition,
+			stackPosition,
+			pictW = 1200, // руками задать необходимую ширину слайдера, иначе в мозиле баг
+			pointW = 30, // руками задать необходимую ширину слайдера, иначе в мозиле баг
+			pointMarginW = 10; // руками задать необходимую ширину mfrgin справа у копки, иначе в мозиле баг
+
+		
+		img = $('.slider_img'); // коллекция картинок
+		images_box = $('.images_container'); // блок с картинками
+
+		$('.slider_castom').css('width', pictW + 'px');
+		$('.slider_img').css('width', pictW + 'px');/* ширина всех картинок по ширине слайдера */
+		$('.images_container').css('width', ( pictW * img.length ) + 'px');/* ширина контейнера для картинок по количеству картинок */
+
+		// добавляем уникальные ид картинкам, что бы при клике по кнопке переходить к картинке с нужным ид
+		for(var i=0; i < img.length; i++){
+			img[i].id = 'slide_img' + ( i + 1 );
+		}
+		
+		$('.slider_castom').append('<ul class="control_points" id="control_points"></ul>');// добавим контейнер для кнопок переключения слайдов
+		for(var i=0; i < img.length; i++){ // добавим кнопки в контейнер
+			$('.control_points').append('<li id="btn' + (i + 1) + '"></li>');
+		}
+		$('.control_points li').eq(0).attr('class','active');// делаем первую кнопку активной
+		$('.control_points').css('marginLeft', '-' + (((pointW * $('.control_points li').length) - pointMarginW) / 2) + 'px');// двигаем блок с контролами в цент слайдера
+
+		$('.slider_img:last').prependTo('.images_container '); // после инициализации сразу ставим последню картинку в начало
+		currentM = -pictW; // текущее положение (marginLeft) минус ширина одной картинки
+		images_box.css('marginLeft',currentM); // ставим текущее положение блока обёртки в минус ширина одной картинки
+
+		// клик по левой кнопке
+		$('.slider_castom .left').on('click', function(e){
+			slider_left_btn_click();
+		});
+		
+		function slider_left_btn_click(){
+			if(end) {
+				end=false;
+				currentM = currentM + pictW;
+				images_box.animate({
+					marginLeft: currentM
+				}, speed,  function () {
+					end = true;
+					$('.slider_img:last').prependTo('.images_container');
+					currentM = currentM - pictW;
+					images_box.css('marginLeft',currentM);
+				});
+
+				// переключаем цвет кнопок
+				if(btnActive > 1 ) {
+					--btnActive;
+					--imgActive;
+				} 
+				else {
+					btnActive = img.length;
+					imgActive = img.length;
+				}
+				//активируем нужную кнопку и деактивируем все остальные
+				$('.control_points li').removeClass('active');
+				$('.control_points #btn' + btnActive).attr('class','active');
+			}
+		}
+
+		
+		// клик по правой кнопке
+		$('.slider_castom .right').on('click', function(e){
+			
+			// для слайдов из двух картинок всегда двигаем вправо
+			if (img.length == 2) slider_left_btn_click(); 
+			else {
+				if(end) {
+					end=false;
+					currentM = currentM - pictW;
+					images_box.animate({
+						marginLeft: currentM
+					}, speed,  function () {
+						end = true;
+						$('.slider_img:first').appendTo('.images_container');
+						currentM = currentM + pictW;
+						images_box.css('marginLeft',currentM);
+					});
+
+					// переключаем цвет кнопок
+					if(btnActive < ( img.length ) ) {
+						++btnActive;
+						++imgActive;
+					} 
+					else {
+						btnActive = 1;
+						imgActive = 1;
+					}
+					//активируем нужную кнопку и деактивируем все остальные
+					$('.control_points li').removeClass('active');
+					$('.control_points #btn' + btnActive).attr('class','active');
+				}
+			}
+		});
+		
+		
+		// обработка клика по контроллеру
+		$('.control_points li').on('click', function(e){
+			if(end) {
+				end=false;
+				clickPosition = $(this).attr('id').split('btn')[1];
+				stackPosition = $('#slide_img' + clickPosition).index(); // получаем индекс нужной картинки в наборе
+				currentM = -stackPosition * pictW;
+				
+				images_box.animate({
+					marginLeft: currentM
+				}, speed,  function () {
+					end = true;
+					
+					if (parseInt(images_box.css('marginLeft')) == 0) {
+						$('.slider_img:last').prependTo('.images_container');
+						currentM = currentM - pictW;
+						images_box.css('marginLeft',currentM);
+					}
+					
+					if( ( (img.length - 1) * pictW ) == -parseInt(currentM) ){
+						for(var s=2; s < img.length; s++){
+							$('.slider_img:first').appendTo('.images_container');
+							currentM = currentM + pictW;
+							images_box.css('marginLeft',currentM);
+						}
+					}
+					
+					btnActive = clickPosition;
+					imgActive = clickPosition;
+					//активируем нужную кнопку и деактивируем все остальные
+					$('.control_points li').removeClass('active');
+					$('.control_points #btn' + clickPosition).attr('class','active');
+				});
+			}
+		});
+		
+	});
 	
 	
 	

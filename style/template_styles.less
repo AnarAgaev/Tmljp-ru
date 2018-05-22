@@ -896,11 +896,15 @@ aside {
 
 
 /* Слайдер на глваной */
-#slider{
+.slider_castom {
+	width: 1200px;
+	height: 440px;
 	margin: 0 auto 40px;
     position: relative;
-	.body_slider{overflow:hidden;}
-	.left,.right{
+	
+	/* кнопки влело, вправо */
+	.left,
+	.right {
 		width: 25px;
 		height: 41px;
 		position: absolute;
@@ -908,39 +912,45 @@ aside {
 		margin-top: -20px;
 		cursor: pointer;
 	}
-	.left{left: -50px;}
-	.right{right: -50px;}
-	.left img, .right img{width: 25px;height: 41px;}
-	.left img{transform: rotate(180deg);}
-	.images .pict{
-		float: left;
-		
-		
-		
-		/* !!!!!!!!!!!!!!!!!!! УДАИТЬ */
-		position: relative;
-		
-		font{
-			display: block;
-			color: #fff;
-			position: absolute;
-			left: 40%;
-			font-size: 15em;
-			font-weight: 900;
-			
-		}
-		
-		
-		
-		
-		
-		
+	.left { left: -50px; }
+	.right { right: -50px; }
+	.left img, 
+	.right img {
+		width: 25px;
+		height: 41px;
 	}
-	ul{
+	.left img {	transform: rotate(180deg); }
+	
+	/* окно в тором показываем слайды */
+	.slider_vewport {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	/* контейнер для картинок, который будем двигать */
+	.images_container {
+		height: 100%;
+		/*width: 6000px;  !!!!!!!      устновить ширину в инициализации */
+		position: relative;
+		margin-left: 0px;
+	}
+	
+	.slider_img {
+		display: inline-block;
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.control_points {
+		display: block;
 		position: absolute;
 		bottom: 25px;
 		left: 50%;
-		margin-left: -70px;
 		li{
 			width: 20px; 
 			height: 6px; 
@@ -951,16 +961,19 @@ aside {
 			display: inline-block;
 			.base__transition;
 		}
-		li:last-child{margin-right: 0;}
-		.active{background-color: #d70f37;}
-		
-		
-		
-		z-index: 1000; /* удалить */
-		
-		
+		li:last-child { margin-right: 0; }
+		.active { background-color: #d70f37; }
 	}
+	
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -984,11 +997,16 @@ aside {
 		width: -moz-calc(~"100% + "2px);
 		width: -webkit-calc(~"100% + "2px);
 		width: calc(100% + 2px);
+
+		/* 
 		height: ~"calc(100% + 3px)";
 		height: calc(~"100% + "3px);
 		height: -moz-calc(~"100% + "3px);
 		height: -webkit-calc(~"100% + "3px);
 		height: calc(100% + 2px);
+		 */	
+
+		height: 282px;
 		padding: 31px 33px;
 		position: absolute;
 		top: -4px;
@@ -1610,7 +1628,6 @@ aside {
 	position: relative;
 	overflow:hidden;
 	
-	
 	.body_galary{
 		position: relative;
 		overflow: hidden;
@@ -1671,8 +1688,6 @@ aside {
 			.base__transition;
 			&:hover{background-color: #c9081f;}
 			
-			
-			
 			span{
 				display: block;
 				background-color: #fff;
@@ -1709,8 +1724,6 @@ aside {
 					right: -7px;
 				}
 			}
-			
-
 		}
 		
 		.images{
@@ -1736,12 +1749,8 @@ aside {
 		display: -ms-inline-flexbox;
 		display: -webkit-inline-flex;
 		display: inline-flex;
-		
-		
-		
 		height: 60px;
 		margin-top: 2px;
-		
 		
 		.prew{
 			max-width: 96px;

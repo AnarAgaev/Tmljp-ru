@@ -16,20 +16,23 @@
 <body>
 <?include_once("template/header.php");?>
 
-<div id = "slider">
-	<div class="left"><img src="img/slider_arrow.svg"></div>
-	<div class="right"><img src="img/slider_arrow.svg"></div>
-	<ul><li><li><li><li><li></ul>  <!-- количество кнопок (<li>) равно колисечству слайдов  -->
-	<div class="body_slider">
-		<div class="images">
-			<div class="pict"><img src="img/slide.jpg"></div>
-			<div class="pict"><img src="img/slide.jpg"></div>
-			<div class="pict"><img src="img/slide.jpg"></div>
-			<div class="pict"><img src="img/slide.jpg"></div>
-			<div class="pict"><img src="img/slide.jpg"></div>
+	<!-- Слайдер. Можно использовать произваольно еколличество картинок -->
+	<div class="slider_castom">
+		<div class="left"><img src="img/slider_arrow.svg"></div> <!-- кнопка влево --> 
+		<div class="right"><img src="img/slider_arrow.svg"></div> <!-- кнопка вправо -->
+		<div class="slider_vewport">
+			<div class="images_container">
+				<!--img class="slider_img" src="img/slide.jpg"-->
+				<img class="slider_img" src="img/tempimg/slide1.jpg">
+				<img class="slider_img" src="img/tempimg/slide2.jpg">
+				<img class="slider_img" src="img/tempimg/slide3.jpg">
+				<img class="slider_img" src="img/tempimg/slide4.jpg">
+				<img class="slider_img" src="img/tempimg/slide5.jpg">
+			</div>
 		</div>
 	</div>
-</div>
+	
+	
 <h1>Продукция</h1>
 <table class="product">
 	<tr>
