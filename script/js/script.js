@@ -1,4 +1,11 @@
-$(document).ready(function(){   
+$(document).ready(function(){  
+
+
+	// прокрутить к началу страницы при клике по кнопке стрелка вверх
+	$('#go_to_top').on('click', function(e){
+		$('html, body').animate({scrollTop: 0},500);
+    	return false;
+	});
 	
 	// аккардеон в левом сайдабере
 	$('#nav_list a').on("click", function(e) {

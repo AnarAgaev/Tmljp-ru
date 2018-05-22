@@ -16,7 +16,7 @@
 
 
 <div class="fix__buttons">
-	<a href="javascript:void(0)"><img src="/img/to-top.svg"></a>
+	<a href="javascript:void(0)" id="go_to_top"><img src="/img/to-top.svg"></a>
 	<a href="javascript:void(0)"><img src="/img/callback_btn.svg"></a>
 	<a href="javascript:void(0)"><img src="/img/mail-float.svg"></a>
 </div>
